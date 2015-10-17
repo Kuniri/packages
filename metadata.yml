@@ -1,0 +1,326 @@
+--- !ruby/object:Gem::Specification
+name: kuniri
+version: !ruby/object:Gem::Version
+  version: 0.0.1
+platform: ruby
+authors:
+- Gustavo Jaruga
+- Rodrigo Siqueira
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2015-08-03 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '10.0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: '10.0'
+- !ruby/object:Gem::Dependency
+  name: nokogiri
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.6.6
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 1.6.6
+description: Generic parser
+email:
+- darksshades@hotmail.com
+- rodrigosiqueiramelo@gmail.com
+executables:
+- kuniri
+extensions: []
+extra_rdoc_files: []
+files:
+- ".gitignore"
+- ".rspec"
+- ".travis.yml"
+- ".yardopts"
+- COPYING
+- Gemfile
+- Guardfile
+- README.md
+- Rakefile
+- bin/kuniri
+- data/attribute_lang.rb
+- data/class_lang.rb
+- data/conditional_lang.rb
+- data/constructor_lang.rb
+- data/end_block_lang.rb
+- data/extern_requirement_lang.rb
+- data/function_behavior_lang.rb
+- data/lang_syntax.rb
+- data/module_namespace_lang.rb
+- data/repetition_lang.rb
+- data/token_lang.rb
+- data/variable_global_lang.rb
+- kuniri.gemspec
+- lib/kuniri.rb
+- lib/kuniri/core/configuration/language_available.rb
+- lib/kuniri/core/configuration/log_available.rb
+- lib/kuniri/core/configuration/monitor_available.rb
+- lib/kuniri/core/kuniri.rb
+- lib/kuniri/core/setting.rb
+- lib/kuniri/error/configuration_file_error.rb
+- lib/kuniri/error/language_error.rb
+- lib/kuniri/language/abstract_container/structured_and_oo/attribute.rb
+- lib/kuniri/language/abstract_container/structured_and_oo/class.rb
+- lib/kuniri/language/abstract_container/structured_and_oo/comment.rb
+- lib/kuniri/language/abstract_container/structured_and_oo/conditional.rb
+- lib/kuniri/language/abstract_container/structured_and_oo/constructor.rb
+- lib/kuniri/language/abstract_container/structured_and_oo/end_block.rb
+- lib/kuniri/language/abstract_container/structured_and_oo/extern_requirement.rb
+- lib/kuniri/language/abstract_container/structured_and_oo/function_behavior.rb
+- lib/kuniri/language/abstract_container/structured_and_oo/module_namespace.rb
+- lib/kuniri/language/abstract_container/structured_and_oo/repetition.rb
+- lib/kuniri/language/abstract_container/structured_and_oo/variable_behaviour.rb
+- lib/kuniri/language/abstract_container/structured_and_oo/variable_global.rb
+- lib/kuniri/language/container_data/structured_and_oo/attribute_data.rb
+- lib/kuniri/language/container_data/structured_and_oo/basic_data.rb
+- lib/kuniri/language/container_data/structured_and_oo/class_data.rb
+- lib/kuniri/language/container_data/structured_and_oo/conditional_data.rb
+- lib/kuniri/language/container_data/structured_and_oo/constructor_data.rb
+- lib/kuniri/language/container_data/structured_and_oo/extern_requirement_data.rb
+- lib/kuniri/language/container_data/structured_and_oo/file_element.rb
+- lib/kuniri/language/container_data/structured_and_oo/function_abstract.rb
+- lib/kuniri/language/container_data/structured_and_oo/function_data.rb
+- lib/kuniri/language/container_data/structured_and_oo/method_data.rb
+- lib/kuniri/language/container_data/structured_and_oo/module_namespace_data.rb
+- lib/kuniri/language/container_data/structured_and_oo/repetition_data.rb
+- lib/kuniri/language/container_data/structured_and_oo/variable_global_data.rb
+- lib/kuniri/language/language.rb
+- lib/kuniri/language/language_factory.rb
+- lib/kuniri/language/ruby/attribute_ruby.rb
+- lib/kuniri/language/ruby/class_ruby.rb
+- lib/kuniri/language/ruby/comment_ruby.rb
+- lib/kuniri/language/ruby/conditional_ruby.rb
+- lib/kuniri/language/ruby/constructor_ruby.rb
+- lib/kuniri/language/ruby/end_block_ruby.rb
+- lib/kuniri/language/ruby/extern_requirement_ruby.rb
+- lib/kuniri/language/ruby/function_behavior_ruby.rb
+- lib/kuniri/language/ruby/module_namespace_ruby.rb
+- lib/kuniri/language/ruby/repetition_ruby.rb
+- lib/kuniri/language/ruby/ruby_syntax.rb
+- lib/kuniri/language/ruby/token_ruby.rb
+- lib/kuniri/language/ruby/variable_behaviour_ruby.rb
+- lib/kuniri/language/ruby/variable_global_ruby.rb
+- lib/kuniri/parser/parser.rb
+- lib/kuniri/parser/parser_xml.rb
+- lib/kuniri/state_machine/OO_structured_fsm/attribute_state.rb
+- lib/kuniri/state_machine/OO_structured_fsm/class_state.rb
+- lib/kuniri/state_machine/OO_structured_fsm/comment_state.rb
+- lib/kuniri/state_machine/OO_structured_fsm/conditional_state.rb
+- lib/kuniri/state_machine/OO_structured_fsm/constructor_state.rb
+- lib/kuniri/state_machine/OO_structured_fsm/function_state.rb
+- lib/kuniri/state_machine/OO_structured_fsm/idle_state.rb
+- lib/kuniri/state_machine/OO_structured_fsm/include_state.rb
+- lib/kuniri/state_machine/OO_structured_fsm/method_state.rb
+- lib/kuniri/state_machine/OO_structured_fsm/module_state.rb
+- lib/kuniri/state_machine/OO_structured_fsm/oo_structured_state.rb
+- lib/kuniri/state_machine/OO_structured_fsm/repetition_state.rb
+- lib/kuniri/state_machine/OO_structured_fsm/token_state_machine.rb
+- lib/kuniri/state_machine/OO_structured_fsm/variable_state.rb
+- lib/kuniri/util/html_logger.rb
+- lib/kuniri/util/logger.rb
+- lib/kuniri/util/txt_logger.rb
+- lib/kuniri/version.rb
+- other/analyseFile.asta
+- spec/core/kuniri_spec.rb
+- spec/core/setting_spec.rb
+- spec/language/abstract_container/attribute_spec.rb
+- spec/language/abstract_container/class_spec.rb
+- spec/language/abstract_container/comment_spec.rb
+- spec/language/abstract_container/conditional_spec.rb
+- spec/language/abstract_container/constructor_spec.rb
+- spec/language/abstract_container/end_block_spec.rb
+- spec/language/abstract_container/module_namespace_spec.rb
+- spec/language/abstract_container/repetition_spec.rb
+- spec/language/container_data/structured_and_oo/attribute_data_spec.rb
+- spec/language/container_data/structured_and_oo/class_data_spec.rb
+- spec/language/container_data/structured_and_oo/conditional_data_spec.rb
+- spec/language/container_data/structured_and_oo/constructor_data_spec.rb
+- spec/language/container_data/structured_and_oo/extern_requirement_data_spec.rb
+- spec/language/container_data/structured_and_oo/file_element_spec.rb
+- spec/language/container_data/structured_and_oo/function_data_spec.rb
+- spec/language/container_data/structured_and_oo/module_namespace_spec.rb
+- spec/language/container_data/structured_and_oo/repetition_data_spec.rb
+- spec/language/container_data/structured_and_oo/variable_global_data_spec.rb
+- spec/language/language_factory_spec.rb
+- spec/language/language_spec.rb
+- spec/language/ruby/attribute_ruby_spec.rb
+- spec/language/ruby/class_ruby_spec.rb
+- spec/language/ruby/comment_ruby_spec.rb
+- spec/language/ruby/conditional_ruby_spec.rb
+- spec/language/ruby/constructor_ruby_spec.rb
+- spec/language/ruby/end_block_ruby_spec.rb
+- spec/language/ruby/function_behavior_ruby_spec.rb
+- spec/language/ruby/module_namespace_ruby_spec.rb
+- spec/language/ruby/repetition_ruby_spec.rb
+- spec/language/ruby/ruby_syntax_spec.rb
+- spec/language/ruby/variable_ruby_spec.rb
+- spec/parser/parser_spec.rb
+- spec/samples/rubySyntaxParts/attribute/simpleAttribute.rb
+- spec/samples/rubySyntaxParts/class/simpleClass.rb
+- spec/samples/rubySyntaxParts/comment/simple_multiple_line_comment_class.rb
+- spec/samples/rubySyntaxParts/comment/simple_multiple_line_comment_global.rb
+- spec/samples/rubySyntaxParts/comment/simple_single_line_comment_class.rb
+- spec/samples/rubySyntaxParts/comment/simple_single_line_comment_global.rb
+- spec/samples/rubySyntaxParts/conditionalStatment/constructorConditional.rb
+- spec/samples/rubySyntaxParts/conditionalStatment/methodConditional.rb
+- spec/samples/rubySyntaxParts/conditionalStatment/nestedConditional.rb
+- spec/samples/rubySyntaxParts/conditionalStatment/simpleConditional.rb
+- spec/samples/rubySyntaxParts/constructor/simpleConstructor.rb
+- spec/samples/rubySyntaxParts/extern/multipleLineExternRequirement.rb
+- spec/samples/rubySyntaxParts/extern/requireRelative.rb
+- spec/samples/rubySyntaxParts/extern/simpleExternRequirement.rb
+- spec/samples/rubySyntaxParts/fullCode/simpleCodeWithConditional.rb
+- spec/samples/rubySyntaxParts/fullCode/simpleFullCode.rb
+- spec/samples/rubySyntaxParts/function/simpleFunction.rb
+- spec/samples/rubySyntaxParts/method/simpleMethod.rb
+- spec/samples/rubySyntaxParts/module/simpleModule.rb
+- spec/samples/rubySyntaxParts/repetition/simpleRepetition.rb
+- spec/samples/rubySyntaxParts/variable/simpleVariable.rb
+- spec/spec_helper.rb
+- spec/state_machine/OO_structured_fsm/attribute_state_spec.rb
+- spec/state_machine/OO_structured_fsm/class_state_spec.rb
+- spec/state_machine/OO_structured_fsm/comment_state_spec.rb
+- spec/state_machine/OO_structured_fsm/conditional_state_spec.rb
+- spec/state_machine/OO_structured_fsm/constructor_state_spec.rb
+- spec/state_machine/OO_structured_fsm/function_state_spec.rb
+- spec/state_machine/OO_structured_fsm/idle_state_spec.rb
+- spec/state_machine/OO_structured_fsm/include_state_spec.rb
+- spec/state_machine/OO_structured_fsm/method_state_spec.rb
+- spec/state_machine/OO_structured_fsm/module_state_spec.rb
+- spec/state_machine/OO_structured_fsm/oo_structured_state_spec.rb
+- spec/state_machine/OO_structured_fsm/repetition_state_spec.rb
+- spec/state_machine/OO_structured_fsm/variable_state_spec.rb
+- spec/util/html_logger_spec.rb
+- spec/util/logger_spec.rb
+- spec/util/txt_logger_spec.rb
+homepage: http://kuniri.github.io/kuniri/
+licenses:
+- GPLv3
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 2.2.2
+signing_key: 
+specification_version: 4
+summary: Extract class information from code.
+test_files:
+- spec/core/kuniri_spec.rb
+- spec/core/setting_spec.rb
+- spec/language/abstract_container/attribute_spec.rb
+- spec/language/abstract_container/class_spec.rb
+- spec/language/abstract_container/comment_spec.rb
+- spec/language/abstract_container/conditional_spec.rb
+- spec/language/abstract_container/constructor_spec.rb
+- spec/language/abstract_container/end_block_spec.rb
+- spec/language/abstract_container/module_namespace_spec.rb
+- spec/language/abstract_container/repetition_spec.rb
+- spec/language/container_data/structured_and_oo/attribute_data_spec.rb
+- spec/language/container_data/structured_and_oo/class_data_spec.rb
+- spec/language/container_data/structured_and_oo/conditional_data_spec.rb
+- spec/language/container_data/structured_and_oo/constructor_data_spec.rb
+- spec/language/container_data/structured_and_oo/extern_requirement_data_spec.rb
+- spec/language/container_data/structured_and_oo/file_element_spec.rb
+- spec/language/container_data/structured_and_oo/function_data_spec.rb
+- spec/language/container_data/structured_and_oo/module_namespace_spec.rb
+- spec/language/container_data/structured_and_oo/repetition_data_spec.rb
+- spec/language/container_data/structured_and_oo/variable_global_data_spec.rb
+- spec/language/language_factory_spec.rb
+- spec/language/language_spec.rb
+- spec/language/ruby/attribute_ruby_spec.rb
+- spec/language/ruby/class_ruby_spec.rb
+- spec/language/ruby/comment_ruby_spec.rb
+- spec/language/ruby/conditional_ruby_spec.rb
+- spec/language/ruby/constructor_ruby_spec.rb
+- spec/language/ruby/end_block_ruby_spec.rb
+- spec/language/ruby/function_behavior_ruby_spec.rb
+- spec/language/ruby/module_namespace_ruby_spec.rb
+- spec/language/ruby/repetition_ruby_spec.rb
+- spec/language/ruby/ruby_syntax_spec.rb
+- spec/language/ruby/variable_ruby_spec.rb
+- spec/parser/parser_spec.rb
+- spec/samples/rubySyntaxParts/attribute/simpleAttribute.rb
+- spec/samples/rubySyntaxParts/class/simpleClass.rb
+- spec/samples/rubySyntaxParts/comment/simple_multiple_line_comment_class.rb
+- spec/samples/rubySyntaxParts/comment/simple_multiple_line_comment_global.rb
+- spec/samples/rubySyntaxParts/comment/simple_single_line_comment_class.rb
+- spec/samples/rubySyntaxParts/comment/simple_single_line_comment_global.rb
+- spec/samples/rubySyntaxParts/conditionalStatment/constructorConditional.rb
+- spec/samples/rubySyntaxParts/conditionalStatment/methodConditional.rb
+- spec/samples/rubySyntaxParts/conditionalStatment/nestedConditional.rb
+- spec/samples/rubySyntaxParts/conditionalStatment/simpleConditional.rb
+- spec/samples/rubySyntaxParts/constructor/simpleConstructor.rb
+- spec/samples/rubySyntaxParts/extern/multipleLineExternRequirement.rb
+- spec/samples/rubySyntaxParts/extern/requireRelative.rb
+- spec/samples/rubySyntaxParts/extern/simpleExternRequirement.rb
+- spec/samples/rubySyntaxParts/fullCode/simpleCodeWithConditional.rb
+- spec/samples/rubySyntaxParts/fullCode/simpleFullCode.rb
+- spec/samples/rubySyntaxParts/function/simpleFunction.rb
+- spec/samples/rubySyntaxParts/method/simpleMethod.rb
+- spec/samples/rubySyntaxParts/module/simpleModule.rb
+- spec/samples/rubySyntaxParts/repetition/simpleRepetition.rb
+- spec/samples/rubySyntaxParts/variable/simpleVariable.rb
+- spec/spec_helper.rb
+- spec/state_machine/OO_structured_fsm/attribute_state_spec.rb
+- spec/state_machine/OO_structured_fsm/class_state_spec.rb
+- spec/state_machine/OO_structured_fsm/comment_state_spec.rb
+- spec/state_machine/OO_structured_fsm/conditional_state_spec.rb
+- spec/state_machine/OO_structured_fsm/constructor_state_spec.rb
+- spec/state_machine/OO_structured_fsm/function_state_spec.rb
+- spec/state_machine/OO_structured_fsm/idle_state_spec.rb
+- spec/state_machine/OO_structured_fsm/include_state_spec.rb
+- spec/state_machine/OO_structured_fsm/method_state_spec.rb
+- spec/state_machine/OO_structured_fsm/module_state_spec.rb
+- spec/state_machine/OO_structured_fsm/oo_structured_state_spec.rb
+- spec/state_machine/OO_structured_fsm/repetition_state_spec.rb
+- spec/state_machine/OO_structured_fsm/variable_state_spec.rb
+- spec/util/html_logger_spec.rb
+- spec/util/logger_spec.rb
+- spec/util/txt_logger_spec.rb
