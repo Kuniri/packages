@@ -1,0 +1,26 @@
+Source: ruby-kuniri
+Section: ruby
+Priority: optional
+Maintainer: Debian Ruby Extras Maintainers <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Uploaders: <>
+Build-Depends: debhelper (>= 9~),
+               gem2deb,
+               rake,
+               ruby-nokogiri (>= 1.6.6),
+               ruby-rspec
+Standards-Version: 3.9.6
+Vcs-Git: git://anonscm.debian.org/pkg-ruby-extras/ruby-kuniri.git
+Vcs-Browser: https://anonscm.debian.org/cgit/pkg-ruby-extras/ruby-kuniri.git
+Homepage: http://kuniri.github.io/kuniri/
+Testsuite: autopkgtest-pkg-ruby
+XS-Ruby-Versions: all
+
+Package: ruby-kuniri
+Architecture: all
+XB-Ruby-Versions: ${ruby:Versions}
+Depends: ruby | ruby-interpreter,
+         ruby-nokogiri (>= 1.6.6),
+         ${misc:Depends},
+         ${shlibs:Depends}
+Description: Extract class information from code.
+ Generic parser
